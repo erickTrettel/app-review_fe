@@ -1,0 +1,21 @@
+<div class="example-container">
+  <br>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-form-field>
+      <input matInput placeholder="Email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'" required [formControl]="password">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+    <mat-error *ngIf="loginErrorMessage">{{loginErrorMessage}}</mat-error>
+    <br>
+    <button mat-raised-button color="primary" id="btnLogin" type="submit">Entrar</button>
+  </form>
+  <br>
+  <button mat-raised-button color="warn" id="btnLoginGoogle" (click)="loginGoogle()">Entrar com o Google</button>
+  <br>
+  <button mat-button id="btnSignUp" (click)="createUser()">Cadastre-se</button>
+</div>

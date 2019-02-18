@@ -1,0 +1,23 @@
+<div class="container" *ngIf="aplicacao">
+  <button class="btn-add-review" mat-flat-button color="primary" (click)="addReview()">Postar uma critica</button>
+  <h1>{{ aplicacao.descricao }} <span style="font-size: 0.6em; font-weight: 390">{{ aplicacao.categoria }}</span></h1>
+  <mat-divider></mat-divider>
+  <br>
+
+  <!-- Reviews -->
+  <mat-card *ngFor="let review of reviews" class="review-card">
+    <button mat-button *ngIf="review.usuarioId==usuarioId" (click)="deletarReview(review)" style="float: right">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ review.usuarioNome }}</mat-card-title>
+      <mat-card-subtitle>Nota: <span>{{ review.nota }} / 10</span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <p>"{{ review.review }}"</p>
+    </mat-card-content>
+  </mat-card>
+</div>

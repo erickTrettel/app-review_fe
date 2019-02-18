@@ -1,0 +1,87 @@
+{
+  "aplicacoes": [
+    {
+      "id": 1,
+      "descricao": "Netflix",
+      "categoria": "Entretenimento",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com"
+    },
+    {
+      "id": 2,
+      "descricao": "Spotify",
+      "categoria": "Entretenimento",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com"
+    },
+    {
+      "id": 3,
+      "descricao": "Instagram",
+      "categoria": "Social",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com"
+    },
+    {
+      "id": "4",
+      "descricao": "Deezer",
+      "categoria": "Entretenimento",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com"
+    },
+    {
+      "id": "5",
+      "descricao": "WhatsApp",
+      "categoria": "Social",
+      "usuarioId": "xhKMrVXzqxS8LXL1Nd7XBwgRhj42",
+      "usuarioNome": "Erick Trettel",
+      "usuarioEmail": "ericktrettel@hotmail.com"
+    },
+    {
+      "id": "6",
+      "descricao": "Trello",
+      "categoria": "Negócios",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "review": "Este app é muito bom",
+      "nota": 10,
+      "idAplicacao": 1,
+      "descricaoAplicacao": "Netflix",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com",
+      "usuarioFoto": "https://lh4.googleusercontent.com/-1zXzu-vyQn8/AAAAAAAAAAI/AAAAAAAAePg/fQmpqBnpBXY/photo.jpg"
+    },
+    {
+      "id": 2,
+      "review": "Adoro este app",
+      "nota": 9,
+      "idAplicacao": 1,
+      "descricaoAplicacao": "Netflix",
+      "usuarioId": "xhKMrVXzqxS8LXL1Nd7XBwgRhj42",
+      "usuarioNome": "Erick Trettel",
+      "usuarioEmail": "ericktrettel@hotmail.com",
+      "usuarioFoto": ""
+    },
+    {
+      "id": 3,
+      "review": "Melhor app para musicas",
+      "nota": 8,
+      "idAplicacao": "2",
+      "descricaoAplicacao": "Spotify",
+      "usuarioId": "IcDCF13DnnTg7kNezpag2cNfdi22",
+      "usuarioNome": "Érick Trettel de A.",
+      "usuarioEmail": "ericktrettel@gmail.com",
+      "usuarioFoto": "https://lh4.googleusercontent.com/-1zXzu-vyQn8/AAAAAAAAAAI/AAAAAAAAePg/fQmpqBnpBXY/photo.jpg"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-vertical-stepper #stepper>
+    <mat-step>
+      <form [formGroup]="addForm">
+        <ng-template matStepLabel>Qual o nome do seu app?</ng-template>
+        <!-- <mat-form-field>
+          <input matInput placeholder="Id" formControlName="id" name="id" id="id" required>
+        </mat-form-field><br> -->
+        <mat-form-field>
+          <input matInput placeholder="Meu app incrível" formControlName="descricao" name="descricao" id="descricao" required>
+        </mat-form-field>
+        <!-- Hidden user attr -->
+        <input formControlName="usuarioId" name="usuarioId" id="usuarioId" hidden>
+        <input formControlName="usuarioNome" name="usuarioNome" id="usuarioNome" hidden>
+        <input formControlName="usuarioEmail" name="usuarioEmail" id="usuarioEmail" hidden>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form [formGroup]="addForm">
+        <ng-template matStepLabel>Selecione uma categoria:</ng-template>
+        <mat-form-field>
+          <mat-select placeholder="Categorias" formControlName="categoria" id="categoria">
+            <mat-option *ngFor="let categoria of categorias" [value]="categoria.value">
+              {{categoria.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Voltar</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Pronto</ng-template>
+      Feito, agora pressione o botão para cadastrar seu app incrível!
+      <br>
+      <div>
+        <button mat-button matStepperPrevious>Voltar</button>
+        <button mat-button (click)="addAplicacao()">Cadastrar</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

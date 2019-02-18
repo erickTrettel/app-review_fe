@@ -1,0 +1,41 @@
+<div class="container">
+
+  <table mat-table [dataSource]="aplicacoes" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let aplicacao"> {{aplicacao.descricao}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="categoria">
+      <th mat-header-cell *matHeaderCellDef> Categoria </th>
+      <td mat-cell *matCellDef="let aplicacao"> {{aplicacao.categoria}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="usuarioNome">
+      <th mat-header-cell *matHeaderCellDef> Criador </th>
+      <td mat-cell *matCellDef="let aplicacao"> {{aplicacao.usuarioNome}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="usuarioEmail">
+      <th mat-header-cell *matHeaderCellDef> E-mail do criador </th>
+      <td mat-cell *matCellDef="let aplicacao"> {{aplicacao.usuarioEmail}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acao">
+      <th mat-header-cell *matHeaderCellDef> Ação </th>
+      <td mat-cell *matCellDef="let aplicacao">
+        <button mat-raised-button (click)="editAplicacao(aplicacao)" style="margin-right: 20px">Editar</button>
+
+        <button mat-raised-button color="warn" (click)="deleteAplicacao(aplicacao)">Deletar</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

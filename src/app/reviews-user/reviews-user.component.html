@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Minhas críticas</h1>
+  <mat-divider></mat-divider>
+  <br>
+
+  <!-- Reviews -->
+  <mat-card *ngFor="let review of reviews" class="review-card">
+    <button mat-button (click)="deletarReview(review)" style="float: right">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <mat-card-header>
+      <mat-card-title>{{ review.descricaoAplicacao }}</mat-card-title>
+      <mat-card-subtitle>Nota: <span>{{ review.nota }} / 10</span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <p>"{{ review.review }}"</p>
+    </mat-card-content>
+  </mat-card>
+</div>

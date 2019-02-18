@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="editForm" (ngSubmit)="editarAplicacao()">
+    <h4>Nome</h4>
+
+    <input formControlName="id" name="id" id="id" hidden>
+
+    <mat-form-field>
+      <input matInput placeholder="Meu app incrível" formControlName="descricao" name="descricao" id="descricao"
+        required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="Categorias" formControlName="categoria" id="categoria">
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria.value">
+          {{categoria.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- Hidden user attr -->
+    <input formControlName="usuarioId" name="usuarioId" id="usuarioId" hidden>
+    <input formControlName="usuarioNome" name="usuarioNome" id="usuarioNome" hidden>
+    <input formControlName="usuarioEmail" name="usuarioEmail" id="usuarioEmail" hidden>
+    <br>
+    <button mat-raised-button color="primary">Editar</button>
+  </form>
+</div>

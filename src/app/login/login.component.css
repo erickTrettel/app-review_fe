@@ -1,0 +1,17 @@
+.hide {
+    display: none;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container > * {
+    margin: 0 auto;
+    width: 30%;
+}
+
+form > * {
+    width: 100%;
+}

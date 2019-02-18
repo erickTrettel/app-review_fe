@@ -1,0 +1,27 @@
+<div class="container" *ngIf="aplicacao">
+  <h1>{{ aplicacao.descricao }}</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="addForm">
+    <!-- <mat-form-field>
+      <input type="number" matInput placeholder="Id" formControlName="id" name="id" id="id">
+    </mat-form-field> -->
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Escreva o que achou aqui" formControlName="review" name="review" id="review"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="number" min="0" max="10" step="1" matInput placeholder="Sua nota" formControlName="nota" name="nota" id="nota">
+    </mat-form-field>
+    <!-- Hidden attr -->
+    <input formControlName="idAplicacao" name="idAplicacao" id="idAplicacao" hidden>
+    <input formControlName="descricaoAplicacao" name="descricaoAplicacao" id="descricaoAplicacao" hidden>
+    <input formControlName="usuarioId" name="usuarioId" id="usuarioId" hidden>
+    <input formControlName="usuarioNome" name="usuarioNome" id="usuarioNome" hidden>
+    <input formControlName="usuarioEmail" name="usuarioEmail" id="usuarioEmail" hidden>
+    <input formControlName="usuarioFoto" name="usuarioFoto" id="usuarioFoto" hidden>
+    <br>
+    <button mat-raised-button color="primary" (click)="addReview()">Postar review</button>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>Atualizar seus dados</h3>
+  <span>Nome: </span> {{ usuarioName }} <br>
+  <span>Email: </span> {{ usuarioEmail }} <br>
+  <br>
+  <form [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
+    <mat-form-field>
+      <input matInput placeholder="Nome" [formControl]="nome" required>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" id="btnUpdate" type="submit">Atualizar</button>
+    <mat-error *ngIf="errorMessage">{{errorMessage}}</mat-error>
+  </form>
+</div>

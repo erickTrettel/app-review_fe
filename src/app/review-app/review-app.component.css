@@ -1,0 +1,15 @@
+.container {
+    padding: 30px;
+}
+
+.review-card {
+    margin-bottom: 20px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.btn-add-review {
+    float: right;
+}

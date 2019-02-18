@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="searchForm" (ngSubmit)="searchApp()">
+    <mat-form-field appearance="outline" class="pesquisa">
+      <mat-label>Busca algo?</mat-label>
+      <input matInput placeholder="Ex: Netflix" formControlName="descricao" (blur)="f()">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+  <p>Todos as aplicações cadastradas são listadas aqui</p>
+  <br>
+
+  <div class="card-container">
+    <mat-card class="example-card" *ngFor="let app of aplicacoes">
+      <mat-card-header>
+        <mat-card-title>{{ app.descricao }}</mat-card-title>
+        <mat-card-subtitle>{{ app.categoria }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p>Criado por: </p>
+        <span>{{ app.usuarioNome }}</span>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="listReviews(app)">Ver mais...</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
